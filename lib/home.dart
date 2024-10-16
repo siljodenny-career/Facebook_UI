@@ -12,14 +12,14 @@ import 'package:facebook/widgets/postCard.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
-  Home({super.key});
+  const Home({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             "facebook",
             style: TextStyle(
               color: Colors.blue,
@@ -30,19 +30,19 @@ class Home extends StatelessWidget {
           actions: [
             CircularButton(
                 buttonAction: () {
-                  print("Search button clicked");
+                  
                 },
                 buttonIcon: Icons.search),
             CircularButton(
                 buttonAction: () {
-                  print("Chat button clicked");
+                  
                 },
                 buttonIcon: Icons.chat)
           ],
         ),
         body: ListView(
           children: [
-            StatusSection(),
+            const StatusSection(),
             Divider(
               thickness: 1,
               color: Colors.grey[300],
@@ -65,9 +65,9 @@ class Home extends StatelessWidget {
                   buttonColor: Colors.purple),
             ),
             thickDivider,
-            RoomSection(),
+            const RoomSection(),
             thickDivider,
-            StorySection(),
+            const StorySection(),
             thickDivider,
             PostCard(
               postProfileName: "Dulquer Salman",
@@ -97,7 +97,7 @@ class Home extends StatelessWidget {
               footerAvatar: 'assets/avatars/mamooty.jpg',
             ),
             thickDivider,
-            SuggestionSection1(),
+            const SuggestionSection1(),
             thickDivider,
             PostCard(
                 postProfileName: "Tamannah",
@@ -151,7 +151,7 @@ class Home extends StatelessWidget {
                 shareCount: "106",
                 footerAvatar: 'assets/avatars/fahad.jpg'),
             thickDivider,
-            SuggestionSection2(),
+            const SuggestionSection2(),
             thickDivider
             
           ],

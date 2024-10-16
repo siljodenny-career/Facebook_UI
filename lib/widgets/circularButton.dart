@@ -5,7 +5,7 @@ class CircularButton extends StatelessWidget {
   final void Function() buttonAction;
   final Color iconColor;
 
-  CircularButton({
+  const CircularButton({
     required this.buttonAction,
     required this.buttonIcon,
     this.iconColor = Colors.black,
@@ -14,7 +14,7 @@ class CircularButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(5),
+      margin:const EdgeInsets.all(5),
       decoration: BoxDecoration(
         color: Colors.grey[300],
         shape: BoxShape.circle,

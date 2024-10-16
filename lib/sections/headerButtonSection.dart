@@ -7,7 +7,8 @@ class HeaderButtonSection extends StatelessWidget {
   final Widget button2;
   final Widget button3;
 
-  HeaderButtonSection({
+   // ignore: use_key_in_widget_constructors
+   const HeaderButtonSection({
     required this.button1,
     required this.button2,
     required this.button3
@@ -23,9 +24,9 @@ class HeaderButtonSection extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           button1,
-          VerticalDivider(),
+          const VerticalDivider(),
           button2,
-          VerticalDivider(),
+          const VerticalDivider(),
           button3
         ],
       ),

@@ -9,11 +9,11 @@ class SuggestionSection1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 400,
-      margin: EdgeInsets.only(top: 0),
+      margin:const EdgeInsets.only(top: 0),
       child: Column(
         children: [
           Container(
-            child: ListTile(
+            child:const ListTile(
               title: Text("People may you know"),
               trailing: Icon(Icons.more_horiz),
             ),

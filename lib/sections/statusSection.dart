@@ -9,7 +9,7 @@ class StatusSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
      leading:prithviraj ,
-     title: TextField(
+     title:const TextField(
       decoration: InputDecoration(
       hintText: "What's on your mind?",
       hintStyle: TextStyle(

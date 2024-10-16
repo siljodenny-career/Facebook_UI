@@ -18,7 +18,7 @@ class PostCard extends StatelessWidget {
   final String shareCount;
   final String footerAvatar;
 
-  PostCard({
+  const PostCard({
     required this.postProfileName,
     required this.postProfilePicture,
     required this.postTime,
@@ -88,24 +88,24 @@ Widget postCardHeader(
         children: [
           Text(
             postProfileName,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.bold,
               color: Colors.black,
             ),
           ),
-          showBlueTick ? VerfiedIcon() : SizedBox(),
+          showBlueTick ? const VerfiedIcon() : const SizedBox(),
         ],
       ),
       subtitle: Row(
         children: [
           Text(
             postTime,
-            style: TextStyle(
+            style:const TextStyle(
               color: Colors.grey,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 5,
           ),
           Icon(
@@ -115,7 +115,7 @@ Widget postCardHeader(
           )
         ],
       ),
-      trailing: IconButton(onPressed: (){}, icon: Icon(Icons.more_horiz)),
+      trailing: IconButton(onPressed: () {}, icon:const Icon(Icons.more_horiz)),
     ),
   );
 }
@@ -128,23 +128,23 @@ Widget postCardTitle(String postTitle) {
       postTitle != null && postTitle != ""
           ? Container(
               alignment: Alignment.topLeft,
-              padding: EdgeInsets.only(left: 18),
+              padding:const EdgeInsets.only(left: 18),
               child: Text(
                 // ignore: unnecessary_null_comparison
                 postTitle == null ? "" : postTitle,
-                style: TextStyle(
+                style:const TextStyle(
                   fontSize: 15,
                 ),
               ),
             )
-          : SizedBox();
+          :const SizedBox();
 }
 
 //Image section of the postcard
 
 Widget postCardImage(String postImage) {
   return Container(
-    padding: EdgeInsets.only(
+    padding:const EdgeInsets.only(
       top: 10,
     ),
     child: Image.asset(postImage),
@@ -161,7 +161,7 @@ Widget postCardFooter(
 ) {
   return Container(
     height: 50,
-    padding: EdgeInsets.only(
+    padding:const EdgeInsets.only(
       left: 10,
       right: 10,
     ),
@@ -171,8 +171,8 @@ Widget postCardFooter(
         Container(
           child: Row(
             children: [
-              LikedIcon(),
-              SizedBox(width: 3),
+              const LikedIcon(),
+             const SizedBox(width: 3),
               displayText(label: likeCount),
             ],
           ),
@@ -181,13 +181,13 @@ Widget postCardFooter(
           child: Row(
             children: [
               displayText(label: commentCount),
-              SizedBox(width: 3),
+              const SizedBox(width: 3),
               displayText(label: "Comments"),
-              SizedBox(width: 10),
+              const SizedBox(width: 10),
               displayText(label: shareCount),
-              SizedBox(width: 3),
+              const SizedBox(width: 3),
               displayText(label: "Shares"),
-              SizedBox(width: 8),
+              const SizedBox(width: 8),
               CircleAvatar(
                 radius: 8,
                 backgroundImage: AssetImage(footerAvatar),
@@ -204,7 +204,7 @@ Widget displayText({required String label}) {
   return Text(
     // ignore: unnecessary_null_comparison
     label == null ? "" : label,
-    style: TextStyle(
+    style:const TextStyle(
       color: Colors.grey,
     ),
   );

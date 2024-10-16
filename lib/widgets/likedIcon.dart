@@ -5,7 +5,7 @@ class LikedIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Icon(
+    return const Icon(
             Icons.thumb_up,
             color: Colors.blue,
             size: 16,

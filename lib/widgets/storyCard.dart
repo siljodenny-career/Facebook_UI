@@ -10,7 +10,7 @@ class StoryCard extends StatelessWidget {
   final bool createStoryStatus;
   final bool celebrityStatus;
 
-  StoryCard({
+  const StoryCard({
     required this.labelText,
     required this.story,
     required this.avatarStory,
@@ -22,7 +22,7 @@ class StoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 150,
-      margin: EdgeInsets.only(
+      margin:const EdgeInsets.only(
         left: 5,
         right: 5,
         top: 10,
@@ -42,7 +42,7 @@ class StoryCard extends StatelessWidget {
                 createStoryStatus
                     ? CircularButton(
                         buttonAction: () {
-                          print("Create new story");
+                          
                         },
                         buttonIcon: Icons.add,
                         iconColor: Colors.blue,
@@ -50,7 +50,7 @@ class StoryCard extends StatelessWidget {
                     : Container(
                         width: 50,
                         height: 50,
-                        margin: EdgeInsets.only(left: 10, top: 10),
+                        margin:const EdgeInsets.only(left: 10, top: 10),
                         decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             border: Border.all(
@@ -70,7 +70,7 @@ class StoryCard extends StatelessWidget {
                 Text(
                   // ignore: prefer_if_null_operators, unnecessary_null_comparison
                   labelText != null ? labelText : "",
-                  style: TextStyle(
+                  style:const TextStyle(
                       fontSize: 15,
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
@@ -78,8 +78,8 @@ class StoryCard extends StatelessWidget {
                
                 //ternary operation
                 celebrityStatus
-                    ? VerfiedIcon()
-                    : SizedBox()
+                    ? const VerfiedIcon()
+                    : const SizedBox()
               ],
             ),
           )

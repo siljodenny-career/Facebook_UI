@@ -18,7 +18,7 @@ class SuggestionSection2 extends StatelessWidget {
               trailing: Icon(Icons.more_horiz),
             ),
           ),
-          Container(
+          SizedBox(
             height: 340,
             child: ListView(
               scrollDirection: Axis.horizontal,

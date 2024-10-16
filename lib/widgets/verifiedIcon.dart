@@ -5,7 +5,7 @@ class VerfiedIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return const Row(
       children: [
         SizedBox(
           width: 3,

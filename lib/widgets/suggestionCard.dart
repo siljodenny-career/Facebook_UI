@@ -5,7 +5,7 @@ class SuggestionCard extends StatelessWidget {
   final String suggestImage;
   final String suggestName;
   final bool verified;
-  SuggestionCard({
+  const SuggestionCard({
     required this.suggestImage,
     required this.suggestName,
     this.verified = false,
@@ -16,7 +16,7 @@ class SuggestionCard extends StatelessWidget {
     return Container(
       height: 310,
       width: 230,
-      margin: EdgeInsets.only(top: 15, left: 10, bottom: 15, right: 5),
+      margin: const EdgeInsets.only(top: 15, left: 10, bottom: 15, right: 5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         boxShadow: [
@@ -46,7 +46,7 @@ Widget suggestionImage(String suggestImage) {
       height: 230,
       width: double.infinity,
       child: ClipRRect(
-        borderRadius: BorderRadius.only(
+        borderRadius: const BorderRadius.only(
           topLeft: Radius.circular(10),
           topRight: Radius.circular(10),
         ),
@@ -66,7 +66,7 @@ Widget suggestionDetails(String suggestName, dynamic verified) {
     right: 0,
     height: 80,
     child: ClipRRect(
-      borderRadius: BorderRadius.only(
+      borderRadius: const BorderRadius.only(
           bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
       child: Container(
         height: 90,
@@ -82,12 +82,12 @@ Widget suggestionDetails(String suggestName, dynamic verified) {
                   Text(
                     // ignore: unnecessary_null_comparison
                     suggestName == null ? "" : suggestName,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  verified ? VerfiedIcon() : SizedBox()
+                  verified ? const VerfiedIcon() : const SizedBox()
                 ],
               ),
             ),
@@ -98,16 +98,15 @@ Widget suggestionDetails(String suggestName, dynamic verified) {
                 children: [
                   ElevatedButton(
                     onPressed: () {},
-                    child: Text("Add Friend"),
-                    style: ButtonStyle(
+                    style: const ButtonStyle(
                       backgroundColor: WidgetStatePropertyAll(Colors.blue),
                       foregroundColor: WidgetStatePropertyAll(Colors.white),
                     ),
+                    child: const Text("Add Friend"),
                   ),
                   OutlinedButton(
                     onPressed: () {},
-                    child: Text("Remove"),
-                    style: ButtonStyle(
+                    style: const ButtonStyle(
                       foregroundColor: WidgetStatePropertyAll(Colors.blue),
                       side: WidgetStatePropertyAll(
                         BorderSide(
@@ -116,6 +115,7 @@ Widget suggestionDetails(String suggestName, dynamic verified) {
                         ),
                       ),
                     ),
+                    child: const Text("Remove"),
                   ),
                 ],
               ),

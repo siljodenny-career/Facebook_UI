@@ -92,10 +92,10 @@ class RoomSection extends StatelessWidget {
       height: 70,
       child: ListView(
           scrollDirection: Axis.horizontal,
-          padding: EdgeInsets.all(5),
+          padding: const EdgeInsets.all(5),
           children: avatarList.map((item) {
             return Padding(
-              padding: EdgeInsets.all(5),
+              padding: const EdgeInsets.all(5),
               child: item,
             );
           }).toList()),
@@ -105,13 +105,13 @@ class RoomSection extends StatelessWidget {
 
 Widget createRoombutton = OutlinedButton.icon(
   onPressed: () {
-    print("Create room clicked");
+    
   },
-  label: Text(
+  label:const Text(
     "Create \nRoom",
     style: TextStyle(color: Colors.blue),
   ),
-  icon: Icon(Icons.video_call),
+  icon:const Icon(Icons.video_call),
   style: ButtonStyle(
     side: WidgetStatePropertyAll(
       BorderSide(
