@@ -55,7 +55,6 @@ class RoomSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     List<Widget> avatarList = [
-      createRoombutton,
       onlineAvatar(
           onlineAvatarImage: 'assets/avatars/dulquar.jpg', displayStatus: true),
       onlineAvatar(
@@ -90,28 +89,34 @@ class RoomSection extends StatelessWidget {
 
     return Container(
       height: 70,
-      child: ListView(
-          scrollDirection: Axis.horizontal,
-          padding: const EdgeInsets.all(5),
-          children: avatarList.map((item) {
-            return Padding(
-              padding: const EdgeInsets.all(5),
-              child: item,
-            );
-          }).toList()),
+      child: Row(
+        children: [
+          createRoombutton,
+          const SizedBox(width: 10),
+          Expanded(
+            child: ListView(
+                scrollDirection: Axis.horizontal,
+                padding: const EdgeInsets.all(5),
+                children: avatarList.map((item) {
+                  return Padding(
+                    padding: const EdgeInsets.all(5),
+                    child: item,
+                  );
+                }).toList()),
+          ),
+        ],
+      ),
     );
   }
 }
 
 Widget createRoombutton = OutlinedButton.icon(
-  onPressed: () {
-    
-  },
-  label:const Text(
+  onPressed: () {},
+  label: const Text(
     "Create \nRoom",
     style: TextStyle(color: Colors.blue),
   ),
-  icon:const Icon(Icons.video_call),
+  icon: const Icon(Icons.video_call),
   style: ButtonStyle(
     side: WidgetStatePropertyAll(
       BorderSide(
