@@ -7,6 +7,7 @@ import 'package:facebook/sections/suggestionSection1.dart';
 import 'package:facebook/sections/suggestionSection2.dart';
 
 import 'package:facebook/widgets/circularButton.dart';
+import 'package:facebook/widgets/customscroll.dart';
 import 'package:facebook/widgets/headerButton.dart';
 import 'package:facebook/widgets/postCard.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +19,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      scrollBehavior: CustomScrollBehavior(),
       home: Scaffold(
         appBar: AppBar(
           title: const Text(
